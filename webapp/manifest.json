@@ -1,96 +1,45 @@
 {
-  "_version": "1.32.0",
+  "_version": "1.12.0",
   "sap.app": {
-    "id": "test",
-    "type": "application",
-    "i18n": "i18n/i18n.properties",
-    "applicationVersion": {
-      "version": "1.0.0"
-    },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "resources": "resources.json",
-    "ach": "ach"
+	"id": "sap.ui.demo.walkthrough",
+	"type": "application",
+	"i18n": "i18n/i18n.properties",
+	"title": "{{appTitle}}",
+	"description": "{{appDescription}}",
+	"applicationVersion": {
+	  "version": "1.0.0"
+	}
   },
   "sap.ui": {
-    "technology": "UI5",
-    "icons": {
-      "icon": "sap-icon://task",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
-    },
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
+	"technology": "UI5",
+	"deviceTypes": {
+		"desktop": true,
+		"tablet": true,
+		"phone": true
+	}
   },
-
   "sap.ui5": {
-    "flexEnabled": false,
-    "rootView": {
-      "viewName": "test.view.test",
-      "type": "XML",
-      "async": true,
-      "id": "test"
-    },
-    "dependencies": {
-			"minUI5Version": "1.95.0",
-      "libs": {
-        "sap.ui.core": {},
-        "sap.m": {},
-        "sap.ui.layout": {},
-        "sap.f": {}
-      }
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "test.i18n.i18n"
-        }
-      }
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
-    },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "async": true,
-        "viewPath": "test.view",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "clearControlAggregation": false
-      },
-      "routes": [
-        {
-          "name": "Routetest",
-          "pattern": "Routetest",
-          "target": ["Targettest"]
-        }
-      ],
-      "targets": {
-        "Targettest": {
-          "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
-          "viewId": "test",
-          "viewName": "test"
-        }
-      }
-    }
+	"rootView": {
+		"viewName": "sap.ui.demo.walkthrough.view.test",
+		"type": "XML",
+		"id": "app"
+	},
+	"dependencies": {
+	  "minUI5Version": "1.95.0",
+	  "libs": {
+		"sap.ui.core": {},
+		"sap.m": {}
+	  }
+	},
+	"models": {
+	  "i18n": {
+		"type": "sap.ui.model.resource.ResourceModel",
+		"settings": {
+		  "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
+		  "supportedLocales": [""],
+		  "fallbackLocale": ""
+		}
+	  }
+	}
   }
 }
